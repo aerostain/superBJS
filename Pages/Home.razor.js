@@ -51,7 +51,7 @@ export function loadGeoJsonData(geoJsonName) {
         pmap.removeLayer(window.geoJsonLayer);
     }
 
-    fetch(`/geojson/${geoJsonName}.json`)
+    fetch(`geojson/${geoJsonName}.json`)
         .then(response => response.json())
         .then(data => {
             window.geoJsonLayer = L.geoJson(data, {
